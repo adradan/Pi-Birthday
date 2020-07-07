@@ -1,0 +1,14 @@
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - Birthday Pi</title>
+        {% else %}
+        <title>Birthday Pi</title>
+        {% endif %}
+    </head>
+    <body>
+        <div><b>Birthday Pi</b> - <a href='/index'>Index</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
