@@ -1,1 +1,1 @@
-web: python pibday.py
+web: gunicorn pibday:app
