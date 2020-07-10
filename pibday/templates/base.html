@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         {% if title %}
@@ -7,7 +8,9 @@
         {% endif %}
     </head>
     <body>
-        <div><b>Birthday Pi</b> - <a href='/index'>Index</a></div>
+        <div><b>Birthday Pi</b> -
+            <a href="{{ url_for('index') }}">Index</a>
+        </div>
         <hr>
         {% block content %}{% endblock %}
     </body>

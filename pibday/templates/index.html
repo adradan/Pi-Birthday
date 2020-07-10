@@ -1,14 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {% if user %}
-    <h1>Hello, {{ user.username }}!</h1>
-    {% else %}
-    <h1>No User Found</h1>
-    {% endif %}
-    {% for post in posts %}
-    <div>
-        <p>{{ post.author }} says: {{ post.body }}</p>
-    </div>
-    {% endfor %}
+    <h1>Check if your birthday is in the first million digits of pi!</h1>
+    <form action="" method="POST">
+        {{ form.hidden_tag() }}
+        <h3>
+            {{ form.month.label }} {{ form.month(size=32, placeholder="1-12") }}
+        </h3>
+        <h3>
+            {{ form.day.label }} {{ form.day(size=32, placeholder="1-31") }}
+        </h3>
+        <h3>
+            {{ form.year.label }} {{ form.year(size=32, placeholder="0-9999") }}
+        </h3>
+        <p>{{ form.submit() }}</p>
+        <p style="color: red;">
+            {% for field, error in form.errors.items() %}
+            * {{ form[field].label }}: {{ error[-1] }}<br>
+            {% endfor %}
+        </p>
+    </form>
 {% endblock %}

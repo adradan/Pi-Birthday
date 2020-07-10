@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if check == True %}
+        <h1>Cool!</h1>
+        <p>
+            Your birthday, <b>{{ bday }}</b>, is in pi!
+        </p>
+    {% else %}
+        <h1>Aww</h1>
+        <p>
+            Your birthday, <b>{{ bday }}</b>, is not in pi.
+        </p>
+    {% endif %}
+{% endblock %}
