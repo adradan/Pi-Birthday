@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for line in lines %}
+        {% if loop.index is divisibleby(100) %}
+            <p>{{ line }} &nbsp;&nbsp;&nbsp;&nbsp; <b>We are now at the {{ loop.index }}'th line!</b></p>
+        {% else %}
+            <p>{{ line }}</p>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

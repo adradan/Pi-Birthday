@@ -9,7 +9,8 @@
     </head>
     <body>
         <div><b>Birthday Pi</b> -
-            <a href="{{ url_for('index') }}">Index</a>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('pi_digits') }}">Digits of Pi</a>
         </div>
         <hr>
         {% block content %}{% endblock %}

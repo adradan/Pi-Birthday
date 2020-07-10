@@ -21,7 +21,7 @@ def index():
     return render_template('index.html', form=form)
 
 
-@app.route('/results', methods=['GET', 'POST'])
+@app.route('/results', methods=['GET'])
 def results():
     check = session.get('check')
     bday = session.get('bday')
@@ -35,3 +35,15 @@ def results():
         'bday': bday
     }
     return render_template('results.html', **context)
+
+
+@app.route('/pi_digits')
+def pi_digits():
+    with open('pi_million.txt', 'r') as pi:
+        lines = (line.strip() for line in pi)
+        context = {
+            'title': 'Million Digits of Pi',
+            'lines': lines
+        }
+        return render_template('pi_digits.html', **context)
+
