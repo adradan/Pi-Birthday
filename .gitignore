@@ -1,7 +1,5 @@
 .vscode
-.flaskenv
 test/
-config.py
 .idea
 
 # Byte-compiled / optimized / DLL files
