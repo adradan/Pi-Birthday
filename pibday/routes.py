@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect, url_for, session
+from flask import render_template, redirect, url_for, session
 from pibday import app
 from pibday.forms import BdayForm
 from pibday.pi_check import Pi
